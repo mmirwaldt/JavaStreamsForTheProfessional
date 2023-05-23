@@ -25,6 +25,14 @@ public class Stream_09_OOM {
                 .parallel()
                 .count());
 
+        // Doesn't lead to any OOM because rangeClosed() isn't infinite
+        System.out.println(IntStream
+                .rangeClosed(0, 10_000_000)
+                .skip(2)
+                .filter(i -> collatzMaxSteps(i, 21) <= 20)
+                .parallel()
+                .count());
+
         // Warning: leads to OOM!
         // See https://stackoverflow.com/q/75012814/2023533 for more information
         System.out.println(IntStream
