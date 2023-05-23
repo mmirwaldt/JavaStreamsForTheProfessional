@@ -17,11 +17,11 @@ import static net.mirwaldt.streams.util.AlchemicalReduce.*;
 public class Stream_07_LessGarbage_Parallel_Benchmark {
 
     /*
+        The parallel stream can benefit from the approach with the string builder:
 
-Benchmark                                                      Mode  Cnt    Score   Error  Units
-Benchmark_07_LessGarbage_2.reduceWithStringBuildersParallel    avgt   25  102.328 ± 0.355  ms/op
-Benchmark_07_LessGarbage_2.reduceWithStringBuildersSequential  avgt   25  224.638 ± 3.675  ms/op
-
+        Benchmark                                                                   Mode  Cnt    Score   Error  Units
+        Stream_07_LessGarbage_Parallel_Benchmark.reduceWithStringBuildersParallel    avgt   25  102.313 ± 0.617  ms/op
+        Stream_07_LessGarbage_Parallel_Benchmark.reduceWithStringBuildersSequential  avgt   25  229.569 ± 4.175  ms/op
      */
 
     String input = createString(20_000_000);

@@ -21,10 +21,9 @@ public class Stream_04_FindAny_Benchmark {
     /*
         This benchmarks shows findAny() can be faster than findFirst().
 
-        Benchmark                                     Mode  Cnt   Score   Error  Units
-        Benchmark_04_FindAny.findAnyParallelStream    avgt   25   9.797 ± 0.139  ms/op
-        Benchmark_04_FindAny.findFirstParallelStream  avgt   25  31.047 ± 0.107  ms/op
-
+        Benchmark                                               Mode  Cnt   Score   Error  Units
+        Stream_04_FindAny_Benchmark.findAnyParallelStream       avgt   25    9.981 ± 0.139  ms/op
+        Stream_04_FindAny_Benchmark.findFirstParallelStream     avgt   25   31.035 ± 0.244  ms/op
      */
 
     @Benchmark

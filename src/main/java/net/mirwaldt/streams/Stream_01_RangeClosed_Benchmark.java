@@ -21,9 +21,9 @@ public class Stream_01_RangeClosed_Benchmark {
     /*
         This benchmarks shows rangeClosed() can be faster than an infinite stream with limit() for parallel streams.
 
-        Benchmark                                           Mode  Cnt   Score   Error  Units
-        Benchmark_01_RangeClosed.filterLimitParallelStream  avgt   25  74.428 ± 0.169  ms/op
-        Benchmark_01_RangeClosed.rangeClosedParallelStream  avgt   25  52.996 ± 0.216  ms/op
+        Benchmark                                                   Mode  Cnt    Score   Error  Units
+        Stream_01_RangeClosed_Benchmark.filterLimitParallelStream   avgt   25   75.269 ± 0.769  ms/op
+        Stream_01_RangeClosed_Benchmark.rangeClosedParallelStream   avgt   25   53.315 ± 0.071  ms/op
      */
 
     @Benchmark

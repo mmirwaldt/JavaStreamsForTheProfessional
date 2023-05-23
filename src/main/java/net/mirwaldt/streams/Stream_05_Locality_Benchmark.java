@@ -17,15 +17,13 @@ import java.util.concurrent.TimeUnit;
 @State(Scope.Thread)
 public class Stream_05_Locality_Benchmark {
     /*
-        Benchmark                                           Mode  Cnt    Score   Error  Units
-        Benchmark_06_Locality.sumArrayListParallel          avgt   25   14.803 ± 1.425  ms/op
-        Benchmark_06_Locality.sumArrayListSequential        avgt   25   23.921 ± 0.034  ms/op
-        Benchmark_06_Locality.sumArrayParallel              avgt   25    2.612 ± 0.004  ms/op
-        Benchmark_06_Locality.sumArraySequential            avgt   25    6.605 ± 0.007  ms/op
-        Benchmark_06_Locality.sumSortedArrayListParallel    avgt   25   65.907 ± 0.071  ms/op
-        Benchmark_06_Locality.sumSortedArrayListSequential  avgt   25  205.647 ± 0.391  ms/op
-
-        Benchmark_06_Locality.sumArrayParallel and Benchmark_06_Locality.sumArraySequential are wrong
+        Benchmark                                                   Mode  Cnt    Score   Error  Units
+        Stream_05_Locality_Benchmark.sumArrayListParallel           avgt   25   14.918 ± 1.578  ms/op
+        Stream_05_Locality_Benchmark.sumArrayListSequential         avgt   25   23.959 ± 0.041  ms/op
+        Stream_05_Locality_Benchmark.sumArrayParallel               avgt   25    2.610 ± 0.003  ms/op
+        Stream_05_Locality_Benchmark.sumArraySequential             avgt   25    6.640 ± 0.006  ms/op
+        Stream_05_Locality_Benchmark.sumSortedArrayListParallel     avgt   25   65.853 ± 0.043  ms/op
+        Stream_05_Locality_Benchmark.sumSortedArrayListSequential   avgt   25  204.988 ± 0.941  ms/op
      */
 
     final int N = 25_000_000;
