@@ -10,8 +10,8 @@ professional".
 
 You can find them here:
 
-* in German: https://github.com/mmirwaldt/JavaStreamsForTheProfessional/blob/master/JavaStreamsFuerProfis.pdf
-* in English: https://github.com/mmirwaldt/JavaStreamsForTheProfessional/blob/master/JavaStreamsForProfessionals.pdf
+* in German: https://github.com/mmirwaldt/JavaStreamsForTheProfessional/blob/master/JavaParallelStreamsFuerProfis.pdf
+* in English: coming soon
 
 They are protected by a password which you get when you watch this talk.
 
