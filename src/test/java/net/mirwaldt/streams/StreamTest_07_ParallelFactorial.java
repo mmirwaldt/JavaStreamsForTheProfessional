@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SuppressWarnings("NewClassNamingConvention")
-public class StreamTest_08_ParallelFactorial {
+public class StreamTest_07_ParallelFactorial {
     @Test
     void test() {
-        Stream_08_ParallelFactorial_Benchmark benchmark = new Stream_08_ParallelFactorial_Benchmark();
+        Stream_07_ParallelFactorial_Benchmark benchmark = new Stream_07_ParallelFactorial_Benchmark();
         assertEquals(benchmark.parallelStream(), benchmark.forkJoinPool());
         assertEquals(benchmark.parallelStreamKaratsubaTomCook(), benchmark.forkJoinPoolKaratsubaTomCook());
         assertEquals(benchmark.parallelStream(), benchmark.parallelStreamKaratsubaTomCook());

@@ -14,14 +14,14 @@ import static net.mirwaldt.streams.util.AlchemicalReduce.*;
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Thread)
-public class Stream_07_LessGarbage_Parallel_Benchmark {
+public class Stream_06_LessGarbage_Parallel_Benchmark {
 
     /*
         The parallel stream can benefit from the approach with the string builder:
 
         Benchmark                                                                   Mode  Cnt    Score   Error  Units
-        Stream_07_LessGarbage_Parallel_Benchmark.reduceWithStringBuildersParallel    avgt   25  102.313 ± 0.617  ms/op
-        Stream_07_LessGarbage_Parallel_Benchmark.reduceWithStringBuildersSequential  avgt   25  229.569 ± 4.175  ms/op
+        Stream_06_LessGarbage_Parallel_Benchmark.reduceWithStringBuildersParallel    avgt   25  102.313 ± 0.617  ms/op
+        Stream_06_LessGarbage_Parallel_Benchmark.reduceWithStringBuildersSequential  avgt   25  229.569 ± 4.175  ms/op
      */
 
     String input = createString(20_000_000);
@@ -47,7 +47,7 @@ public class Stream_07_LessGarbage_Parallel_Benchmark {
 
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
-                .include(Stream_07_LessGarbage_Parallel_Benchmark.class.getSimpleName())
+                .include(Stream_06_LessGarbage_Parallel_Benchmark.class.getSimpleName())
                 .build();
         new Runner(opt).run();
     }

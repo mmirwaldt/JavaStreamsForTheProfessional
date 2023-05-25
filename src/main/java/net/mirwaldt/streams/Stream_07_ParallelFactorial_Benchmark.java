@@ -17,15 +17,15 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Thread)
-public class Stream_08_ParallelFactorial_Benchmark {
+public class Stream_07_ParallelFactorial_Benchmark {
     /*
         The solution with the ForkJoinPool is much faster than the solution with the parallel stream by default:
 
         Benchmark                                                               Mode  Cnt   Score   Error  Units
-        Stream_08_ParallelFactorial_Benchmark.forkJoinPool                      avgt   25   16.564 ± 0.022  ms/op
-        Stream_08_ParallelFactorial_Benchmark.forkJoinPoolKaratsubaTomCook      avgt   25   23.108 ± 0.037  ms/op
-        Stream_08_ParallelFactorial_Benchmark.parallelStream                    avgt   25   39.100 ± 0.026  ms/op
-        Stream_08_ParallelFactorial_Benchmark.parallelStreamKaratsubaTomCook    avgt   25   18.728 ± 0.060  ms/op
+        Stream_07_ParallelFactorial_Benchmark.forkJoinPool                      avgt   25   16.564 ± 0.022  ms/op
+        Stream_07_ParallelFactorial_Benchmark.forkJoinPoolKaratsubaTomCook      avgt   25   23.108 ± 0.037  ms/op
+        Stream_07_ParallelFactorial_Benchmark.parallelStream                    avgt   25   39.100 ± 0.026  ms/op
+        Stream_07_ParallelFactorial_Benchmark.parallelStreamKaratsubaTomCook    avgt   25   18.728 ± 0.060  ms/op
 
         However, these results also show the solution with the parallel stream can be optimized for more Karatsuba and
         Tom-Cook multiplications and gets faster but the solution with the ForkJoinPool suffers from that optimization.
@@ -54,7 +54,7 @@ public class Stream_08_ParallelFactorial_Benchmark {
 
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
-                .include(Stream_08_ParallelFactorial_Benchmark.class.getSimpleName())
+                .include(Stream_07_ParallelFactorial_Benchmark.class.getSimpleName())
                 .build();
         new Runner(opt).run();
     }
