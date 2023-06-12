@@ -5,17 +5,17 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicLong;
 
 import static java.math.BigInteger.ONE;
-import static java.util.stream.Collectors.joining;
 import static net.mirwaldt.streams.util.Factorial.parallelStream;
 import static net.mirwaldt.streams.util.FactorialTask.forkJoinPool;
-import static net.mirwaldt.streams.util.KaratsubaTomCook.*;
+import static net.mirwaldt.streams.util.KaratsubaTomCook.KARATSUBA_THRESHOLD_IN_BITS;
+import static net.mirwaldt.streams.util.KaratsubaTomCook.TOM_COOK_THRESHOLD_IN_BITS;
 
 /*
 Output:
 Multiplications:
 	Possible at most:
 		Total multiplications: 99999
-		Karatsuba multiplications: 591
+		Karatsuba multiplications: 395
 		TomCook multiplications: 196
 	Factorial.parallelStream:
 		Total multiplications: 99998
@@ -46,10 +46,10 @@ public class MultiplicationStatistics {
         System.out.println("Multiplications:");
         System.out.println("\tPossible at most:");
         System.out.println("\t\tTotal multiplications: " + (N - 1));
-        System.out.println("\t\tKaratsuba multiplications: "
-                + (result.bitLength() / KARATSUBA_THRESHOLD_IN_BITS - 1)); // -1 because we count pairs
-        System.out.println("\t\tTomCook multiplications: "
-                + (result.bitLength() / TOM_COOK_THRESHOLD_IN_BITS - 1)); // -1 because we count pairs
+        int maxTomCookMultiplications = result.bitLength() / TOM_COOK_THRESHOLD_IN_BITS - 1;
+        int maxKaratsubaMultiplications = (result.bitLength() / KARATSUBA_THRESHOLD_IN_BITS) - 1 - maxTomCookMultiplications;
+        System.out.println("\t\tKaratsuba multiplications: " + maxKaratsubaMultiplications);
+        System.out.println("\t\tTomCook multiplications: " + maxTomCookMultiplications); // -1 because we count pairs
 
         System.out.println("\tFactorial.parallelStream:");
         System.out.println("\t\tTotal multiplications: " + watcher.totalCount());
