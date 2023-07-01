@@ -11,7 +11,7 @@ professional".
 You can find them here:
 
 * in German: https://github.com/mmirwaldt/JavaStreamsForTheProfessional/blob/master/JavaParallelStreamsFuerProfis.pdf
-* in English: https://github.com/mmirwaldt/JavaStreamsForTheProfessional/blob/master/JavaStreamsForProfessionals.pdf
+* in English: https://github.com/mmirwaldt/JavaStreamsForTheProfessional/blob/master/JavaParallelStreamsForProfessionals.pdf
 
 They are protected by a password which you get when you watch this talk.
 
